@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
      <head>
           <meta charset="utf-8" />
-          <title>Bouncing balls</title>
-          <link rel="stylesheet" href="style.css" />
+          <title>My test page</title>
      </head>
-
      <body>
-          <h1>Bouncing Balls</h1>
-          <p class="player1">Player 1 ball count: 0</p>
-          <p class="player2">Player 2 ball count: 0</p>
-          <canvas></canvas>
-
-          <script src="main test 3.js"></script>
+          <p>This is my page</p>
      </body>
+     <script>
+          let promise = fetch("coffee.jpg");
+          let promise2 = promise.then((respone) => response.blob());
+
+          let promise3 = promise2.then((myBlob) => {
+               let objURL = URL.createObjectURL(myBlob);
+               let image = document.createElement("img");
+               img.src = objURL;
+               document.body.appendChild(image);
+          });
+     </script>
 </html>
