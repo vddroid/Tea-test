@@ -26,9 +26,9 @@
 
           // blob() also returns a promise; when it successfully completes it returns
           // The blob object in the callback
-          let promise3 = promise2.then((myBlob) => {
+          let promise3 = promise2.then((Blob) => {
                // Create an object URL that points to the blob object
-               let objectURL = URL.createObjectURL(myBlob);
+               let objectURL = URL.createObjectURL(Blob);
                // Create an <img> element to display the blob (it's an image)
                let image = document.createElement("img");
                // Set the src of the <img> to the object URL so the image displays it
