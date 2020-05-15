@@ -29,7 +29,7 @@
           let tea = fetchAndDecode("tea.jpg", "blob");
           let description = fetchAndDecode("description.txt", "text");
 
-          Promise.all([coffe, tea, description]).then((values) => {
+          Promise.all([coffee, tea, description]).then((values) => {
                console.log(values);
 
                let objectURL1 = URL.createObjectURL(values[0]);
