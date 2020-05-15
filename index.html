@@ -29,27 +29,27 @@
           let tea = fetchAndDecode("tea.jpg", "blob");
           let description = fetchAndDecode("description.txt", "text");
 
-          Promise.all([coffe, tea, description]).then((values) => {});
+          Promise.all([coffe, tea, description]).then((values) => {
+               console.log(values);
 
-          console.log(values);
+               let objectURL1 = URL.createObjectURL(values[0]);
+               let objectURL2 = URL.createObjectURL(values[1]);
+               let descText = values[2];
 
-          let objectURL1 = URL.createObjectURL(values[0]);
-          let objectURL2 = URL.createObjectURL(values[1]);
-          let descText = values[2];
+               let image1 = document.createElement("img");
+               let image2 = document.createElement("img");
 
-          let image1 = document.createElement("img");
-          let image2 = document.createElement("img");
+               image1 = objectURL1;
+               image2 = objectURL2;
 
-          image1 = objectURL1;
-          image2 = objectURL2;
+               document.body.appendChild(image1);
+               document.body.appendChild(image2);
 
-          document.body.appendChild(image1);
-          document.body.appendChild(image2);
+               let para = document.createElement("p");
 
-          let para = document.createElement("p");
+               para.textContent = descText;
 
-          para.textContent = descText;
-
-          document.body.appendChild(para);
+               document.body.appendChild(para);
+          });
      </script>
 </html>
